@@ -1,0 +1,194 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(145deg, #fffbe6, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  padding: 0;
+  color: black;
+}
+
+/* ==== 404 Container ==== */
+.error-404 {
+  max-width: 550px;
+  background-color: white;
+  padding: 40px 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.error-404 h1 {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.error-404 h1 mark {
+  background: linear-gradient(45deg, #f4c430, #f49f30);
+  color: black;
+  border-radius: 12px;
+  padding: 0 16px;
+}
+
+.error-404 p {
+  font-size: 1.15rem;
+  color: #444;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* === Button Row Container (centers buttons inline) === */
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.oops {
+  transition: opacity 0.6s ease;
+  opacity: 1;
+}
+
+.back-home {
+  color: black;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.back-home:hover {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  background-color: #f4c430;
+}
+
+/* === Theme Toggle Button === */
+.theme-toggle {
+  background: #f4c430;
+  color: black;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: black;
+  color: #f4c430;
+}
+
+/* Tooltip */
+.tooltip-mode {
+  position: relative;
+}
+
+.tooltip-mode::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(56, 56, 56);
+  color: white;
+  font-size: 0.75rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip-mode:hover::after {
+  opacity: 1;
+}
+
+/* Smooth transition for theme changes */
+body, .error-404 {
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode {
+  background: #0f0f0f;
+  color: #f4f4f4;
+}
+
+body.dark-mode .error-404 {
+  background-color: #1a1a1a;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .oops {
+  color: #ccc;
+}
+
+body.dark-mode .back-home {
+  color: white;
+
+  transition: all 0.3s ease;
+  box-shadow: 1px 8px 17px 1px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .back-home:hover {
+  background-color: black;
+  color: #f4c430;
+}
+
+body.dark-mode .background {
+  opacity: 0.07;
+  filter: brightness(0.6);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .button-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .back-home {
+    width: 100%;
+    justify-content: center;
+  }
+}

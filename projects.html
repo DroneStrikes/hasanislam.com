@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | hasanislam.com</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore Hasan Islam's projects including video edits, graphic design, and web development. A portfolio of creative skills in action.">
+    <meta name="keywords" content="Hasan Islam, projects, video editing, web design, graphic design, coding, portfolio, creative work">
+    <meta name="author" content="Hasan Islam">    
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.hasanislam.com/">
+    <link rel="icon" href="./images/favicon/letter-h.ico" type="image/x-icon">
+
+    <!-- Social Media Meta Tags -->
+     <meta property="og:title" content="Hasan Islam | Portfolio">
+     <meta property="og:type" content="website">
+     <meta property="og:description" content="Explore Hasan Islam's portfolio showcasing creative work, projects, and a unique personal brand. Get inspired!">
+     <meta property="og:url" content="https://www.hasanislam.com">
+     <meta property="og:site_name" content="Hasan Islam">
+     <meta property="og:locale" content="en_UK">
+     <meta property="og:image" content="https://www.hasanislam.com/images/hasanislam.com.jpg">
+
+    <meta name="twitter:title" content="Projects | Hasan Islam">
+    <meta name="twitter:description" content="Explore Hasan Islam's creative portfolio of video, web, and graphic design projects.">
+    <meta name="twitter:image" content="https://www.hasanislam.com/images/hasanislam.com.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- CSS external link -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/projects.css">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWorkSeries",
+        "name": "Projects",
+        "url": "https://www.hasanislam.com/projects",
+        "description": "Portfolio of creative projects including web design, video editing, and graphic design by Hasan Islam.",
+        "creator": {
+          "@type": "Person",
+          "name": "Hasan Islam"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav class="navbar">
+          <a href="./index.html" class="navbar-logo">hasanislam.com</a>
+
+        <!-- Hamburger Menu -->
+          <div id="menuIcon" class="container" onclick="toggleNav(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+      </nav>
+
+        <!-- Overlay Navigation -->
+          <div id="myNav" class="overlay">
+
+            <!-- Overlay content -->
+              <ul class="menu-list">
+                  <li style="--i:#f4c430;--j:#f49f30;">
+                    <a href="./index.html">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Home</span>
+                    </a>
+                  </li>
+
+                  <li style="--i:#FF86C8;--j:#FF4081;">
+                    <a href="./gallery.html">
+                    <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+                    <span class="title">Gallery</span>
+                    </a>
+                  </li>
+
+                  <li style="--i:#00AEEF;--j:#00FFC6;">
+                    <a href="./projects.html">
+                    <span class="icon"><ion-icon name="folder-open-outline"></ion-icon></span>
+                    <span class="title">Projects</span>
+                    </a>
+                  </li>
+
+                  <li style="--i:#7D5FFF;--j:#42C9FF;">
+                    <a href="./about.html">
+                    <span class="icon"><ion-icon name="information-outline"></ion-icon></span>
+                    <span class="title">About Me</span>
+                    </a>
+                  </li>
+
+            <!-- Gradient Close Button -->
+                  <li class="close-menu" style="--i:#FF4C4C;--j:#B00020;" onclick="toggleNav()">
+                    <span class="icon"><ion-icon name="close-outline"></ion-icon></span>
+                  </li>
+              </ul>
+    </header>
+
+    <!-- Space between nav and content -->
+     <div class="empty-container"></div>
+
+    <!-- Slide-in Projects Banner -->
+    <div id="projects-note" class="projects-note">
+      <p>🛠️ This Projects page is still being worked on — more of my projects will be added soon!</p>
+    </div>
+
+    <!-- Projects Heading -->
+     <section id="projects-hero">
+        <!-- Container -->
+         <div class="project-container">
+
+            <!-- Full header -->
+             <div class="p-header">
+                <h1>My Projects</h1>
+             </div>
+
+            <!-- Description -->
+             <div class="p-description">
+                <p>Here you will find a selection of my work.</p>
+             </div>
+
+             <!-- Filter Buttons -->
+             <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Show All</button>
+                <button class="filter-btn video" data-filter="video">Video</button>
+                <button class="filter-btn graphic" data-filter="graphic">Graphic</button>
+                <button class="filter-btn web" data-filter="web">Web</button>
+             </div>
+         </div>
+     </section>
+
+     <!-- Projects -->
+      <section class="projects">
+      <div class="project-grid">
+
+        <!-- Project 1 -->
+        <div class="wrapper project-item" data-category="video">
+          <div class="image-wrapper">
+            <img src="./images/projects/self-portrait.webp" alt="Self Portrait">
+          </div>
+          <div class="header-wrapper" data-link="aiofMgbNmcQ">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>My Self Portrait</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="wrapper project-item" data-category="video">
+          <div class="image-wrapper">
+            <img src="./images/projects/rhg.webp" alt="Robin Hood Lane E14">
+          </div>
+          <div class="header-wrapper" data-link="Q2rPVybNGVY">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">Robin Hood Gardens</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="wrapper project-item" data-category="video">
+          <div class="image-wrapper">
+            <img src="./images/projects/sse.webp" alt="School for Social Entrepreneurs">
+          </div>
+          <div class="header-wrapper" data-link="Q6oeYk0pdT0">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>SSE: Who me?</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="wrapper project-item" data-category="web">
+          <div class="image-wrapper">
+            <img src="./images/projects/impact-culture.webp" alt="Impact Culture Ltd">
+          </div>
+          <div class="header-wrapper" data-url="https://www.impactculture.org.uk">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>Impact Culture</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="wrapper project-item" data-category="web">
+          <div class="image-wrapper">
+            <img src="./images/projects/register-a-charity.webp" alt="Impact Culture Ltd">
+          </div>
+          <div class="header-wrapper" data-url="https://www.registeracharity.com">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>Register Charity</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="wrapper project-item" data-category="web">
+          <div class="image-wrapper">
+            <img src="./images/projects/hasanislam.webp" alt="hasanislam.com">
+          </div>
+          <div class="header-wrapper" data-url="https://www.hasanislam.com">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>My Website</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="wrapper project-item" data-category="video">
+          <div class="image-wrapper">
+            <img src="./images/projects/like.webp" alt="Intro screen to my subvertising campaign">
+          </div>
+          <div class="header-wrapper" data-link="r__qGJI441s">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>Like for Life</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="wrapper project-item" data-category="video">
+          <div class="image-wrapper">
+            <img src="./images/projects/tango.webp" alt="Criminal Goodness Tango Ad">
+          </div>
+          <div class="header-wrapper" data-link="i9yz0H7x8gg">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>Tango Advert</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="wrapper project-item" data-category="graphic">
+          <div class="image-wrapper">
+            <img src="./images/projects/muslim-aid.webp" alt="Muslim Aid">
+          </div>
+          <div class="header-wrapper" data-gallery="muslim-aid">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>Muslim Aid</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="wrapper project-item" data-category="graphic">
+          <div class="image-wrapper">
+            <img src="./images/projects/relentless-nomad.webp" alt="Relentless Nomad">
+          </div>
+          <div class="header-wrapper" data-gallery="relentless-nomad">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>Relentless Nomad</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 10 -->
+        <div class="wrapper project-item" data-category="graphic">
+          <div class="image-wrapper">
+            <img src="./images/projects/beacon.webp" alt="beacon-institute">
+          </div>
+          <div class="header-wrapper" data-gallery="beacon-institute">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>Beacon Institute</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 11 -->
+        <div class="wrapper project-item" data-category="graphic">
+          <div class="image-wrapper">
+            <img src="./images/projects/lve-foundation-b&w.webp" alt="LVE Foundation">
+          </div>
+          <div class="header-wrapper" data-gallery="lve-foundation">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>LVE Foundation</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 12 -->
+        <div class="wrapper project-item" data-category="graphic">
+          <div class="image-wrapper">
+            <img src="./images/projects/bca.webp" alt="Big Creative Education">
+          </div>
+          <div class="header-wrapper" data-gallery="bce">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>Big Creative</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 13 -->
+        <div class="wrapper project-item" data-category="graphic">
+          <div class="image-wrapper">
+            <img src="./images/projects/candi.webp" alt="City and Islington College">
+          </div>
+          <div class="header-wrapper" data-gallery="candi">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>Candi Isoc</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Project 14 -->
+        <div class="wrapper project-item" data-category="graphic">
+          <div class="image-wrapper">
+            <img src="./images/projects/early-graphics.jpg" alt="Graphics">
+          </div>
+          <div class="header-wrapper" data-gallery="early-graphic">
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;"></br>Early Graphic</mark>
+            </h1>
+            <h1 class="h1-title">
+              <mark style="background-color: #F4C430;">See Project</mark>
+            </h1>
+          </div>
+        </div>
+
+      </div>
+      </section>
+
+    <!-- Gallery Popup -->
+    <div class="gallery-overlay">
+      <div class="gallery-popup">
+        <div class="gallery-images" id="gallery-images"></div>
+      </div>
+    </div>
+
+    <!-- Web Preview Popup -->
+    <div class="web-overlay">
+      <div class="web-popup">
+        <iframe src="" title="Website preview" frameborder="0"></iframe>
+        <div class="visit-site-btn">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="text">Visit Site</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video Popup -->
+    <div class="player-overlay">
+      <div class="player-popup">
+        <iframe 
+        src="https://www.youtube.com/embed/"
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    
+    <!-- To top button -->
+    <button onclick="topFunction()" id="topBtn" title="Go to top"><i class="arrow up"></i></button>
+  
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="social-media">
+          <a href="#" class="icon email" id="contactBtn"><ion-icon name="send-outline"></ion-icon></a>
+          <a href="https://www.instagram.com/hasan.xix/"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="https://www.youtube.com/@hasanxxiv"><ion-icon name="logo-youtube"></ion-icon></a>
+          <a href="https://www.linkedin.com/in/h-islam/"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+        <p>&copy; Copyright 2025<br />All Rights Reserved.</p>
+        <p class="footer-message" id="footer-message"></p>
+      </div>
+    </footer>
+
+            <!-- Email Lightbox -->
+            <div id="contactLightbox" class="lightbox">
+                <div class="lightbox-content">
+
+                    <div id="contactForm">
+                        <span id="closeButton">&times;</span> <!-- Close button -->
+
+                        <div id="formContent">
+                            <h1 class="contactus-head"><mark style="background-color: #F4C430;"> Get in Touch </mark></h1>
+                            <small class="contactus-subhead">We'd love to hear from you!</small>
+
+                            <form action="https://api.web3forms.com/submit" method="POST" class="form-box">
+                                <input type="hidden" name="access_key" value="41f16e07-0af7-4dac-af9e-7aaa45cdffce">
+                                <div class="form-name">
+                                    <div class="fname">
+                                        <label for="fname">First Name</label>
+                                        <input type="text" id="fname" placeholder="Enter your first name" required>
+                                    </div>
+                                    <div class="lname">
+                                        <label for="lname">Last Name</label>
+                                        <input type="text" id="lname" placeholder="Enter your last name" required>
+                                    </div>
+                                </div>
+                                <div class="email">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="message">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" placeholder="Enter your message" required></textarea>
+                                </div>
+                                <div class="captcha-wrap">
+                                    <div class="g-recaptcha" data-sitekey="6LdOThsrAAAAAHoPXSi2qGfKBr5ceAwgQ9sSu28D"></div>
+                                </div>
+                                <div class="formbtns">
+                                    <button type="submit" class="animated-submit noselect">
+                                        <span class="submit-text">Submit</span>
+                                        <span class="tick-circle">
+                                            <span class="tick">&#10003;</span> <!-- ✓ -->
+                                        </span>
+                                    </button>
+                                    <button type="reset" class="formBtn reset">Clear</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-popup" role="dialog" aria-label="Cookie Policy" aria-live="polite">
+        <p>🍪 In order to give you the best browsing experience, this website uses cookies. By continuing to browse, you accept that.</p>
+        <button onclick="acceptCookies()">Accept & Close</button>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/projects.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>

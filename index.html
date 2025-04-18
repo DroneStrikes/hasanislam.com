@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>hasanislam.com</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Hasan Islam's personal portfolio—showcasing creative work, projects, and a unique personal brand. Explore and get inspired.">
+    <meta name="keywords" content="Hasan Islam, portfolio, personal brand, creative work, projects, photography, gallery, web design, development, coding">
+    <meta name="author" content="Hasan Islam">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.hasanislam.com/">
+    <link rel="icon" href="./images/favicon/letter-h.ico" type="image/x-icon">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="Hasan Islam | Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Explore Hasan Islam's portfolio showcasing creative work, projects, and a unique personal brand. Get inspired!">
+    <meta property="og:url" content="https://www.hasanislam.com">
+    <meta property="og:site_name" content="Hasan Islam">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:image" content="https://www.hasanislam.com/images/hasanislam.com.jpg">
+
+    <meta name="twitter:title" content="Hasan Islam | Portfolio">
+    <meta name="twitter:description" content="Explore Hasan Islam's portfolio showcasing creative work, projects, and a unique personal brand. Get inspired!">
+    <meta name="twitter:image" content="https://www.hasanislam.com/images/hasanislam.com.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- CSS external link -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/index.css">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hasan Islam",
+        "url": "https://www.hasanislam.com",
+        "sameAs": [
+            "https://www.instagram.com/hasan.xix/",
+            "https://www.youtube.com/@hasanxxiv",
+            "https://www.linkedin.com/in/h-islam/"
+        ],
+        "jobTitle": "Creative Specialist",
+        "description": "Hasan Islam's personal portfolio showcasing creative work and projects."
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+     <header>
+        <nav class="navbar">
+            <a href="./index.html" class="navbar-logo">hasanislam.com</a>
+     </header>
+
+    <!-- Background Image -->
+    <div id="background"></div>
+    
+    <!-- Section -->
+    <section id="hero">
+            <!-- Container -->
+            <div class="hero-container">
+
+                <!-- Header -->
+                <div class="hero-header">
+                    <h1><mark style="background-color: #F4C430;">Hasan</br>Islam</mark><h1>
+                </div>
+
+        <!-- Icons -->
+        <div class="toolbar">
+            <div class="wrapper">
+            <!-- Start Here label -->
+            <div class="start-here">
+                <p>Start Here:</p>
+            </div>
+                
+                <!-- Main Icons -->
+                <div class="icon-group">
+                    <a href="./gallery.html" class="icon gallery">
+                        <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+                        <div class="tooltip">Gallery</div>
+                    </a>
+
+                    <a href="./projects.html" class="icon projects">
+                        <span class="icon"><ion-icon name="folder-open-outline"></ion-icon></span>
+                        <div class="tooltip">Projects</div>
+                    </a>
+
+                    <a href="./about.html" class="icon about-me">
+                        <span class="icon"><ion-icon name="information-outline"></ion-icon></span>
+                        <div class="tooltip">About</div>
+                    </a>
+
+                    <a href="#" class="icon email" id="contactBtn">
+                        <span class="icon"><ion-icon name="send-outline"></ion-icon></span>
+                        <div class="tooltip">Email</div>
+                    </a>                    
+
+                    <!-- Social FAB now styled like other icons -->
+                    <div class="fab-wrapper">
+                        <input id="fabCheckbox" type="checkbox" class="fab-checkbox"/>
+                        
+                        <label class="icon fab" for="fabCheckbox">
+                            <span class="icon"><ion-icon name="share-social-outline"></ion-icon></span>    
+                            <div class="tooltip">Socials</div>         
+                        </label>
+           
+                        <div class="fab-wheel">
+                            <a href="https://www.instagram.com/hasan.xix/" target="_blank" class="fab-action fab-action-1">
+                                <span class="icon instagram"><ion-icon name="logo-instagram"></ion-icon></span>
+                            </a>
+                            <a href="https://www.youtube.com/@hasanxxiv" target="_blank" class="fab-action fab-action-2">
+                                <span class="icon youtube"><ion-icon name="logo-youtube"></ion-icon></span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/h-islam/" target="_blank" class="fab-action fab-action-3">
+                                <span class="icon linkedin"><ion-icon name="logo-linkedin"></ion-icon></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+
+                <!-- Content -->
+                <div class="hero-content">
+                    <!-- Copyright -->
+                    <p class="copyright">&copy; Copyright 2025<br />All Rights Reserved</p>
+                    <!-- Easter Egg Message -->
+                    <p class="footer-message" id="footer-message"></p>
+                </div>
+    </section>
+
+            <!-- Email Lightbox -->
+            <div id="contactLightbox" class="lightbox">
+                <div class="lightbox-content">
+
+                    <div id="contactForm">
+                        <span id="closeButton">&times;</span> <!-- Close button -->
+
+                        <div id="formContent">
+                            <h1 class="contactus-head"><mark style="background-color: #F4C430;"> Get in Touch </mark></h1>
+                            <small class="contactus-subhead">We'd love to hear from you!</small>
+
+                            <form action="https://api.web3forms.com/submit" method="POST" class="form-box">
+                                <input type="hidden" name="access_key" value="41f16e07-0af7-4dac-af9e-7aaa45cdffce">
+                                <div class="form-name">
+                                    <div class="fname">
+                                        <label for="fname">First Name</label>
+                                        <input type="text" id="fname" placeholder="Enter your first name" required>
+                                    </div>
+                                    <div class="lname">
+                                        <label for="lname">Last Name</label>
+                                        <input type="text" id="lname" placeholder="Enter your last name" required>
+                                    </div>
+                                </div>
+                                <div class="email">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="message">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" placeholder="Enter your message" required></textarea>
+                                </div>
+                                <div class="captcha-wrap">
+                                    <div class="g-recaptcha" data-sitekey="6LdOThsrAAAAAHoPXSi2qGfKBr5ceAwgQ9sSu28D"></div>
+                                </div>
+                                <div class="formbtns">
+                                    <button type="submit" class="animated-submit noselect">
+                                        <span class="submit-text">Submit</span>
+                                        <span class="tick-circle">
+                                            <span class="tick">&#10003;</span> <!-- ✓ -->
+                                        </span>
+                                    </button>
+                                    <button type="reset" class="formBtn reset">Clear</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-popup" role="dialog" aria-label="Cookie Policy" aria-live="polite">
+        <p>🍪 In order to give you the best browsing experience, this website uses cookies. By continuing to browse, you accept that.</p>
+        <button onclick="acceptCookies()">Accept & Close</button>
+    </div>
+     
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>

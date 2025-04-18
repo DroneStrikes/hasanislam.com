@@ -1,0 +1,178 @@
+::selection {
+  color: black;
+  background: #f4c430;
+}
+
+::-moz-selection {
+  color: black;
+  background: #f4c430;
+}
+
+::-o-selection {
+  color: black;
+  background: #f4c430;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#background {
+  background-image: url(hasanislam_lrg_whitebg.webp);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  top: 0;
+}
+
+.navbar a {
+  position: fixed;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 20px;
+  border-radius: 4px;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  letter-spacing: 0.8px;
+}
+
+.navbar a:hover {
+  color: #f4c430;
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-header {
+  position: fixed;
+  top: 20%;
+  left: 22%;
+  font-size: 2.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  transform: translate(-50%, -50%);
+}
+
+/* Button positioning */
+.hero-button {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 1em;
+}
+
+/* Button styling */
+.cta-btn {
+  margin: 16px;
+  font-size: 40px;
+  color: #ccc; /* Base color stays */
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 1s ease-in-out;
+  display: inline-block;
+  overflow: hidden;
+  /*text-shadow: 
+        -1px -1px 0 black, 
+         1px -1px 0 black, 
+        -1px  1px 0 black, 
+         1px  1px 0 black;  Adds black outline */
+
+  &::before {
+    content: attr(data-item);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #f4c430; /* Hover color */
+    white-space: nowrap;
+    overflow: hidden;
+    clip-path: inset(0 100% 0 0); /* Start hidden */
+    opacity: 0; /* Ensure it's fully hidden */
+    transition: clip-path 1s ease-in-out, opacity 0.5s ease-in-out;
+    /*text-shadow: 
+            -1px -1px 0 black, 
+             1px -1px 0 black, 
+            -1px  1px 0 black, 
+             1px  1px 0 black;  Black outline */
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+  }
+}
+
+.hero-content {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  bottom: -2%;
+  right: 0%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font: 16px Helvetica, Sans-Serif;
+  letter-spacing: 1.2px;
+  line-height: 1.4;
+}
+
+.s-media a {
+  color: black;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.s-media a:hover {
+  color: #f4c430;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+/* Responsive layout - make the header and button change per screen size */
+/* Resize for Tablet */

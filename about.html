@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>About Me | hasanislam.com</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn more about Hasan Islam—creative specialist in video editing, graphic design, and web development.">
+    <meta name="keywords" content="Hasan Islam, about me, creative specialist, video editor, web designer, personal brand, portfolio">
+    <meta name="author" content="Hasan Islam">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://www.hasanislam.com/">
+    <link rel="icon" href="./images/favicon/letter-h.ico" type="image/x-icon">
+
+    <!-- Social Media Meta Tags -->
+    <meta property="og:title" content="About Me | Hasan Islam">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Meet Hasan Islam—a creative specialist with a passion for storytelling through video, design, and code.">
+    <meta property="og:url" content="https://www.hasanislam.com/about">
+    <meta property="og:site_name" content="Hasan Islam">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:image" content="https://www.hasanislam.com/images/hasanislam.com.jpg">
+
+    <meta name="twitter:title" content="About Me | Hasan Islam">
+    <meta name="twitter:description" content="Creative storytelling through video, design, and code—by Hasan Islam.">
+    <meta name="twitter:image" content="https://www.hasanislam.com/images/hasanislam.com.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- CSS external link -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/about.css">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hasan Islam",
+        "url": "https://www.hasanislam.com/about",
+        "description": "Creative specialist in video editing, graphic design, and web development. Passionate about storytelling and impactful design.",
+        "image": " ",
+        "sameAs": [
+            "https://www.instagram.com/hasan.xix/",
+            "https://www.youtube.com/@hasanxxiv",
+            "https://www.linkedin.com/in/h-islam/"
+        ],
+        "jobTitle": "Creative Specialist",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of the Arts London"
+        },
+        "knowsAbout": ["Video Editing", "Graphic Design", "Web Design", "Social Media", "HTML", "CSS", "JavaScript"]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <nav class="navbar">
+          <a href="./index.html" class="navbar-logo">hasanislam.com</a>
+
+        <!-- Hamburger Menu -->
+          <div id="menuIcon" class="container" onclick="toggleNav(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+      </nav>
+
+        <!-- Overlay Navigation -->
+          <div id="myNav" class="overlay">
+  
+            <!-- Overlay content -->
+              <ul class="menu-list">
+                  <li style="--i:#f4c430;--j:#f49f30;">
+                    <a href="./index.html">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Home</span>
+                    </a>
+                  </li>
+
+                  <li style="--i:#FF86C8;--j:#FF4081;">
+                    <a href="./gallery.html">
+                    <span class="icon"><ion-icon name="camera-outline"></ion-icon></span>
+                    <span class="title">Gallery</span>
+                    </a>
+                  </li>
+
+                  <li style="--i:#00AEEF;--j:#00FFC6;">
+                    <a href="./projects.html">
+                    <span class="icon"><ion-icon name="folder-open-outline"></ion-icon></span>
+                    <span class="title">Projects</span>
+                    </a>
+                  </li>
+
+                  <li style="--i:#7D5FFF;--j:#42C9FF;">
+                    <a href="./about.html">
+                    <span class="icon"><ion-icon name="information-outline"></ion-icon></span>
+                    <span class="title">About Me</span>
+                    </a>
+                  </li>
+
+            <!-- Gradient Close Button -->
+                  <li class="close-menu" style="--i:#FF4C4C;--j:#B00020;" onclick="toggleNav()">
+                    <span class="icon"><ion-icon name="close-outline"></ion-icon></span>
+                  </li>
+              </ul>
+          </div>
+    </header>
+
+    <!-- Side Navigation Bar -->
+    <div id="mySidenav" class="sidenav">
+    <a href="#skills" id="sk"><span class="link-text">Skills</span></a>
+    <a href="#education" id="edu"><span class="link-text">Education</span></a>
+    <a href="#experience" id="exp"><span class="link-text">Experience</span></a>
+    <a href="#achievements" id="ach"><span class="link-text">Achievements</span></a>
+    </div>
+
+    <!-- Space between nav and content -->
+     <div class="empty-container"></div>
+
+    <!-- Resume -->
+    <section id="resume">
+
+      <!-- Header -->
+      <div class="cv-header">
+        <div class="cv-left">
+          <div class="my-avatar tooltip-avatar" data-tooltip="Yes, that is me 🤓"></div>
+          <h1 class="about-me">About Me.</h1>
+        </div>
+
+        <div class="hcolumn button-group">
+          <div class="btn-wrapper tooltip" data-tooltip="Open LinkedIn">
+            <button onclick="window.open('https://www.linkedin.com/in/h-islam/', '_blank')" class="linkedin-btn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </button>
+          </div>
+
+          <div class="btn-wrapper tooltip" data-tooltip="Send Email">
+            <button class="email-btn" id="contactBtn">
+              <ion-icon name="send-outline"></ion-icon>
+            </button>
+          </div>
+
+          <div class="btn-wrapper tooltip" data-tooltip="Download CV">
+            <button onclick="startDownload()" class="download-btn" id="downloadBtn">
+              <ion-icon name="download-outline"></ion-icon>
+              <span class="download-text">Download</span>
+              <span class="download-loader" id="downloadLoader"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="cv-description">
+        <p class="synopsis">I'm a passionate and versatile creative professional with a BA (Hons) in Media Communications from the University of the Arts London. With a background that blends design, storytelling, technology, and strategy, I bring a dynamic and detail-oriented approach to every project. My core strengths lie in social media management, graphic design, video editing, and front-end web development — and I love turning ideas into impactful digital experiences.Over the years, I've developed and executed campaigns across platforms like Instagram, YouTube, TikTok, and Vimeo, creating content that resonates with diverse audiences and drives engagement. Whether it's post-production video editing, designing branded assets, or crafting meaningful<span id="dots">...</span><span id="more"> social stories, I approach each project with creativity, consistency, and purpose.
+
+        </br></br> I'm proficient in industry-standard tools such as Adobe Photoshop, Premiere Pro, InDesign, Final Cut Pro, and Canva. My portfolio includes digital and print materials ranging from posters and pitch decks to business cards and event invitations. I've had the opportunity to lead design projects for non-profit organisations and small businesses, consistently meeting tight deadlines without compromising on quality.In the web space, I've worked on websites using WordPress, Wix, HTML, CSS, and JavaScript, combining technical skills with visual aesthetics to create responsive, SEO-optimised platforms. I'm also experienced in tracking performance metrics and refining content based on data-driven insights.
+
+        </br></br> Professionally, I've contributed to impactful organisations like Impact Culture Ltd, where I led the design and development of a full website ecosystem, and IIDR, where I volunteered as a video editor, contributing to over 20 educational courses and events. My experience at McDonald's as a Crew Trainer and at Forward Pharmacy sharpened my interpersonal, operational, and leadership skills in fast-paced environments.I'm fluent in English and Bengali, First Aid certified, and knowledgeable about GDPR and data handling practices — all of which support my ability to work confidently and responsibly across various roles and sectors.In everything I do, I value collaboration, storytelling, and purpose-driven work. My journey has taught me to embrace both the creative and the technical — and I'm always seeking new challenges where I can grow, innovate, and make a difference.</span></p>
+      </div>
+    
+      <button onclick="myFunction()" id="readBtn">Read more</button>
+
+  
+
+      <div class="quick-highlights">
+        <h2 class="header"><i class="fa fa-search"></i> Quick Highlights</h2>
+          <ul>
+            <li>🎓 <strong>Media Communications Graduate</strong> - BA (Hons) from UAL</li>
+            <li>🎥 <strong>Content Creation & Editing</strong> - Premiere Pro, Final Cut, YouTube, TikTok</li>
+            <li>🎨 <strong>Graphic Design</strong> - Photoshop, InDesign, Canva</li>
+            <li>🌐 <strong>Web Design & Development</strong> - HTML, CSS, JS, WordPress & Wix</li>
+            <li>📈 <strong>SEO & Social Strategy</strong> - Content for engagement & visibility</li>
+            <li>🌍 <strong>Multilingual</strong> - Fluent in English & Bengali</li>
+            <li>⚡ <strong>Team Player</strong> - Detail-oriented & deadline-driven</li>
+            <li>❤️ <strong>Creative Campaigns</strong> - Britvic Tango award winner</li>
+          </ul>
+      </div>
+
+      <!-- Hasan Skills -->
+      <div class="skills" id="skills">
+        <h2 class="heading"><i class="fa fa-cog"></i> Skills</h2>
+
+        <!-- The grid: four columns -->
+        <div class="skill-row">
+          <div class="skill-column" onclick="openTab('b1')">Social Media & Content Creation</div>
+          <div class="skill-column" onclick="openTab('b2')">Graphic Design & Video Editing</div>
+          <div class="skill-column" onclick="openTab('b3')">Web & Tech</div>
+          <div class="skill-column" onclick="openTab('b4')">Languages & More</div>
+        </div>
+
+        <div id="b1" class="containerTab">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn"><i class="fa fa-close"></i></span>
+        <h3 class="skill-header">Social Media & Content Creation</h3>
+        <ul>
+          <li>Experienced with Instagram, YouTube, TikTok & Vimeo.</li>
+          <li>Skilled in audience engagement, scheduling, and content strategy using tools like Notion and TweetDeck.</li>
+          <li>Proficient in post-production workflows and content optimisation for different platforms.</li>  
+        </div>
+
+        <div id="b2" class="containerTab">
+          <span onclick="this.parentElement.style.display='none'" class="closebtn"><i class="fa fa-close"></i></span>
+          <h3>Graphic Design & Video Editing</h3>
+
+          <p>Adobe Photoshop</p>
+          <div class="video-container"><div class="skill photoshop">90%</div></div>
+
+          <p>Adobe Premiere Pro</p>
+          <div class="video-container"><div class="skill premier">90%</div></div>
+
+          <p>Adobe InDesign</p>
+          <div class="video-container"><div class="skill indesign">80%</div></div>
+
+          <p>Canva</p>
+          <div class="video-container"><div class="skill canva">90%</div></div>
+
+          <p>Sony Vegas Pro</p>
+          <div class="video-container"><div class="skill svp">40%</div></div>
+
+          <p>Final Cut Pro</p>
+          <div class="video-container"><div class="skill fcp">50%</div></div>
+
+          <ul>
+            <li>Designed digital and print materials including menus, posters, invitation cards, business cards, and pitch decks.</li>
+            <li>Familiar with Adobe Media Encoder and After Effects for advanced editing.</li>
+          </ul>
+        </div>
+
+        <div id="b3" class="containerTab">
+          <span onclick="this.parentElement.style.display='none'" class="closebtn"><i class="fa fa-close"></i></span>
+          <h3>Web & Tech Tools</h3>
+
+          <p>HTML</p>
+          <div class="video-container"><div class="skill html">20%</div></div>
+
+          <p>CSS</p>
+          <div class="video-container"><div class="skill css">20%</div></div>
+
+          <p>JavaScript</p>
+          <div class="video-container"><div class="skill js">10%</div></div>
+
+          <p>WordPress</p>
+          <div class="video-container"><div class="skill wordpress">60%</div></div>
+
+          <p>Wix</p>
+          <div class="video-container"><div class="skill wix">80%</div></div>
+
+          <ul>
+            <li>Skilled in SEO, site performance tracking, and content management.</li>
+            <li>Confident using Microsoft Office Suite and EPOS payment systems; experienced with Adobe Muse and pharmacy admin software like Proscript Connect.</li>
+          </ul>
+        </div>
+
+        <div id="b4" class="containerTab">
+          <span onclick="this.parentElement.style.display='none'" class="closebtn"><i class="fa fa-close"></i></span>
+          <h3>Languages & Other Skills</h3>
+          <ul>
+            <li>English (Fluent)</li>
+            <li>Bengali (Fluent)</li>
+            <li>Strong knowledge of GDPR and digital data handling.</li>
+            <li>Basic experience with audio software including Audacity, Adobe Audition, and After Effects for sound design.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hasan Education -->
+      <div class="education" id="education">
+        <h2 class="heading"><i class="fa fa-graduation-cap"></i> Education</h2>
+          <div class="text-box-solo">
+            <h2>Media Communications</h2>
+            <small>University of the Arts London <span class="bachelor">BA(Hons)</span></small>
+            <ul>
+              <li class="list-box">Lower Second Class Honours</li>
+            </ul>
+          </div>
+      </div>
+
+      <!-- Hasan Experience -->
+      <div class="experience" id="experience">
+        <div class="experience-header">
+          <h1 class="heading"><i class="fa fa-briefcase"></i> Work Experience</h1>
+        </div>
+        <div class="timeline">
+          <div class="timeline-container left-container">
+            <img src="./images/about-me/logo/Impact_Culture.png" alt="impact culture logo">
+              <div class="text-box">
+                <h2>Web Designer & Developer</h2>
+                <small>Impact Culture Ltd <span class="freelance">Freelance</span></small>
+                <ul>
+                  <li>Designed and developed the organisation's website and subsidiary pages, ensuring a cohesive and visually engaging online presence.</li>
+                  <li>Optimized content for Google SEO, improving user engagement and visibility online.</li>
+                  <li>Created graphic assets and social media designs to enhance brand identity.</li>
+                  <li>Contributed to improving the overall user experience and visibility of the organisation's services.</li>
+                </ul>
+                <p class="mobile-date">Nov 2022 - Present</p>
+                <span class="left-container-arrow"></span>
+              </div>
+              <span class="left-date">Nov 2022 - Present</span>
+          </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-container right-container">
+          <img src="./images/about-me/logo/IIDR.png" alt="iidr logo">
+          <div class="text-box">
+            <h2>Video Editor</h2>
+            <small>Islamic Institute for Development of Research <span class="freelance">Freelance</span><span class="volunteer">Volunteer</span></small>
+            <ul>
+              <li>Edited video content for over 20 different online courses, requiring strong attention to detail and creativity.</li>
+              <li>Collaborated with event teams to produce high-quality visual materials for seminars and marketing campaigns.</li>
+              <li>Supported seminars in person, such as through registration of attendees.</li>
+            </ul>
+            <p class="mobile-date">Jan 2023 - Present</p>
+            <span class="right-container-arrow"></span>
+          </div>
+          <span class="right-date">Jan 2020 - Present</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-container left-container">
+          <img src="./images/about-me/logo/forward_pharmacy.png" alt="forward pharmacy logo">
+          <div class="text-box">
+            <h2>Pharmaceutical Assistant</h2>
+            <small>Forward Pharmacy <span class="part-time">Part Time</span></small>
+            <ul>
+              <li>Coordinated logistics to scale pharmacy delivery services from 30 to 140+ weekly deliveries, showcasing project management and organisational skills.</li>
+              <li>Built effective communication strategies for engaging with a diverse audience, ensuring inclusivity and accessibility.</li>
+              <li>Maintained accurate data management practices, demonstrating attention to detail critical for tracking appointments and orders.</li>
+            </ul>
+              <p class="mobile-date">Oct 2021 - Present</p>
+            <span class="left-container-arrow"></span>
+          </div>
+          <span class="left-date">Oct 2021 - Dec 2024</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-container right-container">
+          <img src="./images/about-me/logo/beacon_institute.png" alt="beacon institute logo">
+          <div class="text-box">
+            <h2>Graphic Design</h2>
+            <small>Beacon Institute <span class="freelance">Freelance</span><span class="volunteer">Volunteer</span></small>
+            <ul>
+              <li>Designed promotional materials, including posters and leaflets, tailored to specific audiences and events.</li>
+              <li>Enhanced brand awareness through innovative design solutions.</li>
+            </ul>
+              <p class="mobile-date">Sept 2021 - Oct 2021</p>
+            <span class="right-container-arrow"></span>
+          </div>
+          <span class="right-date">Sept 2021 - Oct 2021</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-container left-container">
+          <img src="./images/about-me/logo/islamic-relief.png" alt="islamic relief logo">
+          <div class="text-box">
+            <h2>Charity Shop</h2>
+            <small>Islamic Relief <span class="part-time">Part Time</span><span class="volunteer">Volunteer</span></small>
+            <ul>
+              <li>Managed donation processing and shop floor organisation while assisting with in-store operations.</li>
+              <li>Curated shop displays to enhance visual appeal and customer engagement.</li>
+              <li>Developed organizational and interpersonal skills in a dynamic retail environment. </li>
+            </ul>
+              <p class="mobile-date">May 2020 - Jan 2022</p>
+            <span class="left-container-arrow"></span>
+          </div>
+          <span class="left-date">May 2020 - Jan 2022</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-container right-container">
+          <img src="./images/about-me/logo/McDonalds.png" alt="mcdonalds logo">
+          <div class="text-box">
+            <h2>Crew Trainer</h2>
+            <small>McDonald's <span class="part-time">Part Time</span></small>
+            <ul>
+              <li>Trained and supported new team members in customer service and operational efficiency.</li>
+              <li>Exceeded sales and performance goals by implementing innovative solutions.</li>
+            </ul>
+              <p class="mobile-date">Jan 2018 - Dec 2020</p>
+            <span class="right-container-arrow"></span>
+          </div>
+          <span class="right-date">July 2018 - Dec 2020</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-container left-container">
+          <img src="./images/about-me/logo/alzheimers-society.jpg" alt="alcheimers society logo">
+          <div class="text-box">
+            <h2>Volunteer</h2>
+            <small>Alzheimer's Society <span class="part-time">Part Time</span><span class="volunteer">Volunteer</span></small>
+            <ul>
+              <li>Developed tailored communication strategies to effectively engage with individuals from diverse backgrounds.</li>
+              <li>Gained experience in organising and leading group activities, fostering connection and engagement.</li>
+              <li>Strengthened confidentiality and safeguarding awareness, vital for managing sensitive information.</li>
+            </ul>
+              <p class="mobile-date">Jan 2017 - Jan 2020</p>
+            <span class="left-container-arrow"></span>
+          </div>
+          <span class="left-date">Jan 2017 - Jan 2020</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-container right-container">
+          <img src="./images/about-me/logo/lve-foundation.png" alt="lve foundation logo">
+          <div class="text-box">
+            <h2>Graphic Designer</h2>
+            <small>LVE Foundation <span class="temporary">Temporary</span></small>
+            <ul>
+              <li>Designed branded assets, including logos, business cards, and promotional materials, aligning with organisational identity.</li>
+              <li>Applied creative problem-solving to meet client requirements and deliver visually impactful designs.</li>
+              <li>Enhanced branding efforts through cohesive design and attention to detail, contributing to improved outreach.</li>
+            </ul>
+              <p class="mobile-date">May 2017</p>
+            <span class="right-container-arrow"></span>
+          </div>
+          <span class="right-date">May 2017</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-container left-container">
+          <img src="./images/about-me/logo/subway.jpg" alt="subway logo">
+          <div class="text-box">
+            <h2>Sandwhich Artist</h2>
+            <small>Subway <span class="part-time">Part Time</span></small>
+            <ul>
+              <li>Managed daily operations, including cash handling, customer service, and team coordination.</li>
+            </ul>
+              <p class="mobile-date">May 2016 - Oct 2016</p>
+            <span class="left-container-arrow"></span>
+          </div>
+          <span class="left-date">May 2016 - Oct 2016</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Achievements -->
+    <div class="achievements" id="achievements">
+      <h2 class="heading"><i class="fa fa-trophy"></i> Achievements</h2>
+      <div class="text-box-solo">
+        <ul>
+          <li>Awarded by Britvic Tango for a creative campaign (May 2016).</li>
+          <li>Certified in First Aid by High-Speed Training (Nov 2021)</li>
+          <li>Led branding & marketing projects for multiple non-profits.</li>
+          <li>Successfully launched campaigns, short films & adverts.</li>
+          <li>Full UK driver's licence.</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- To top button -->
+  <button onclick="topFunction()" id="topBtn" title="Go to top"><i class="arrow up"></i></button>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+        <div class="social-media">
+          <a href=" " class="icon email" id="contactBtn"><ion-icon name="send-outline"></ion-icon></a>
+          <a href="https://www.instagram.com/hasan.xix/"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="https://www.youtube.com/@hasanxxiv"><ion-icon name="logo-youtube"></ion-icon></a>
+          <a href="https://www.linkedin.com/in/h-islam/"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+        <p>&copy; Copyright 2025<br />All Rights Reserved.</p>
+        <p class="footer-message" id="footer-message"></p>
+    </div>
+  </footer>
+
+            <!-- Email Lightbox -->
+            <div id="contactLightbox" class="lightbox">
+                <div class="lightbox-content">
+
+                    <div id="contactForm">
+                        <span id="closeButton">&times;</span> <!-- Close button -->
+
+                        <div id="formContent">
+                            <h1 class="contactus-head"><mark style="background-color: #F4C430;"> Get in Touch </mark></h1>
+                            <small class="contactus-subhead">We'd love to hear from you!</small>
+
+                            <form action="https://api.web3forms.com/submit" method="POST" class="form-box">
+                                <input type="hidden" name="access_key" value="41f16e07-0af7-4dac-af9e-7aaa45cdffce">
+                                <div class="form-name">
+                                    <div class="fname">
+                                        <label for="fname">First Name</label>
+                                        <input type="text" id="fname" placeholder="Enter your first name" required>
+                                    </div>
+                                    <div class="lname">
+                                        <label for="lname">Last Name</label>
+                                        <input type="text" id="lname" placeholder="Enter your last name" required>
+                                    </div>
+                                </div>
+                                <div class="email">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="message">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" placeholder="Enter your message" required></textarea>
+                                </div>
+                                <div class="captcha-wrap">
+                                    <div class="g-recaptcha" data-sitekey="6LdOThsrAAAAAHoPXSi2qGfKBr5ceAwgQ9sSu28D"></div>
+                                </div>
+                                <div class="formbtns">
+                                    <button type="submit" class="animated-submit noselect">
+                                        <span class="submit-text">Submit</span>
+                                        <span class="tick-circle">
+                                            <span class="tick">&#10003;</span> <!-- ✓ -->
+                                        </span>
+                                    </button>
+                                    <button type="reset" class="formBtn reset">Clear</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-popup" role="dialog" aria-label="Cookie Policy" aria-live="polite">
+        <p>🍪 In order to give you the best browsing experience, this website uses cookies. By continuing to browse, you accept that.</p>
+        <button onclick="acceptCookies()">Accept & Close</button>
+    </div>
+
+  <script src="./scripts/script.js"></script>
+  <script src="./scripts/about.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

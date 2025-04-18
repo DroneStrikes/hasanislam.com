@@ -1,0 +1,661 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+  background-color: white;
+}
+
+::selection {
+  color: black;
+  background: #f4c430;
+}
+
+::-moz-selection {
+  color: black;
+  background: #f4c430;
+}
+
+::-o-selection {
+  color: black;
+  background: #f4c430;
+}
+
+/* Hamburger Menu */
+.container {
+  display: inline-block;
+  cursor: pointer;
+  position: fixed;
+  left: 20px;
+  z-index: 3; /* Keep above overlay */
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Transform hamburger into 'X' */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* Hide hamburger menu when overlay is active */
+.overlay-active #menuIcon {
+  display: none;
+}
+
+/* Overlay Navigation */
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  text-align: center;
+  z-index: 2000;
+  transition: height 0.5s ease-in-out;
+}
+
+/* Show overlay when active */
+.overlay.show {
+  height: 100%;
+}
+
+/* Center menu items in overlay */
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Menu Items */
+.menu-list li {
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  position: relative;
+}
+
+/* Hover Effect: Expand & Show Gradient */
+.menu-list li:hover {
+  width: 180px;
+}
+
+/* Gradient Background Effect */
+.menu-list li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 60px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu-list li:hover::before {
+  opacity: 1;
+}
+
+/* Menu Item Links */
+.menu-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Icon Styling */
+.menu-list li .icon ion-icon {
+  color: #424242;
+  font-size: 1.25em;
+  transition: 0.25s;
+}
+
+/* Hide Icon on Hover */
+.menu-list li:hover .icon ion-icon {
+  transform: scale(0);
+  color: #fff;
+  transition-delay: 0s;
+}
+
+/* Title Styling */
+.menu-list li .title {
+  position: absolute;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  transition: 0.25s;
+  transform: scale(0);
+}
+
+/* Show Title on Hover */
+.menu-list li:hover .title {
+  cursor: pointer;
+  transform: scale(1);
+  transition-delay: 0.1s;
+}
+
+/* Close Button Styling */
+.close-menu {
+  width: 60px !important;
+  height: 60px !important;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: none;
+}
+
+/* Close Button Hover Effect */
+.close-menu:hover {
+  width: 60px !important; /* Prevents expansion */
+  height: 60px !important;
+}
+
+.close-menu .icon ion-icon {
+  color: white;
+  font-size: 2em; /* Make icon larger */
+}
+
+/* Close Button: Keep Icon Visible */
+.close-menu:hover .icon ion-icon {
+  transform: scale(1); /* Prevents icon from disappearing */
+  color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 24px;
+  }
+  .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* Navigation Bar */
+header {
+  background-color: white;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  padding: 13px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 5px;
+  border-radius: 4px;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  letter-spacing: 0.8px;
+}
+
+.navbar a:hover {
+  color: #f4c430;
+}
+
+.empty-container {
+  height: 50px;
+  background-color: transparent;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  top: 0;
+}
+
+.navbar a {
+  position: fixed;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 20px;
+  border-radius: 4px;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  letter-spacing: 0.8px;
+}
+
+.navbar a:hover {
+  color: #f4c430;
+}
+
+/* Lightbox Base */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact Form Styling */
+.lightbox-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  perspective: 1000px;
+}
+
+/* Close Button */
+.close, #closeButton {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  background: white;
+  border: 2px solid darkred;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close:hover, #closeButton:hover {
+  background: darkred;
+  color: white;
+}
+
+/* Headings */
+h1.contactus-head { 
+  font-size: 28px;
+  color: black;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+small.contactus-subhead {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Form fields */
+label {
+  font-size: 14px;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input:focus, textarea:focus {
+  border-color: #f4c430;
+  box-shadow: 0 0 5px rgba(0, 128, 128, 0.3);
+  outline: none;
+}
+
+/* Name field layout */
+.form-name {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.fname, .lname {
+  flex: 1;
+}
+
+.captcha-wrap {
+  margin: 15px 0;
+}
+
+/* Button styles */
+.formbtns {
+  text-align: right;
+}
+
+.formbtns {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.formBtn.reset {
+  width: 100px;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #bbb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.formBtn.reset:hover {
+  background-color: #888;
+  color: white;
+}
+
+.animated-submit {
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  background-color: #f4c430;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  letter-spacing: 1px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animated-submit:hover {
+  background: linear-gradient(45deg, #f4c430, #f49f30);
+}
+
+.submit-text {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+}
+
+/* Loader Circle */
+.tick-circle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #17b978;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: all 0.4s ease;
+  z-index: 2;
+}
+
+/* Spinner Animation */
+.animated-submit.loading .tick-circle {
+  opacity: 1;
+  transform: scale(0.8);
+  border-top: 2px solid transparent;
+  animation: spin 1s linear infinite;
+}
+
+/* Stop spinning and show tick */
+.animated-submit.submitted .tick-circle {
+  border: 2px solid #17b978;
+  animation: none;
+  transform: scale(1.2);
+}
+
+.animated-submit.submitted .tick {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hide tick until submitted */
+.tick {
+  color: #17b978;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+/* Hide text on loading or submitted */
+.animated-submit.loading .submit-text,
+.animated-submit.submitted .submit-text {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) scale(0.8); }
+  100% { transform: rotate(360deg) scale(0.8); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-name {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .lightbox-content {
+    padding: 20px;
+  }
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font: 16px Helvetica, Sans-Serif;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  padding: 0 5px;
+}
+
+.footer-message {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
+}
+
+.social-media a {
+  color: black;
+  margin-right: 9px;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+footer .social-media a:hover ion-icon[name="send-outline"] {
+  color: #f4c430;
+}
+
+footer .social-media a:hover ion-icon[name="logo-instagram"] {
+  color: #e1306c;
+}
+
+footer .social-media a:hover ion-icon[name="logo-youtube"] {
+  color: #ff0000;
+}
+
+footer .social-media a:hover ion-icon[name="logo-linkedin"] {
+  color: #0077b5;
+}
+
+/* Cookie Popup - Base Styles */
+#cookie-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 1rem 1.2rem;
+  border-radius: 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  animation: fadeInSlideUp 0.4s ease forwards;
+}
+
+.cookie-title {
+  display: none; /* Hide title entirely */
+}
+
+#cookie-popup p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  flex: 1;
+  margin: 0;
+}
+
+#cookie-popup button {
+  width: auto;
+  flex-shrink: 0;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  background-color: rgba(255, 200, 35, 0.425);
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-transform: uppercase;
+}
+
+#cookie-popup button:hover {
+  background-color: #e0b420;
+}
+
+/* Animation */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

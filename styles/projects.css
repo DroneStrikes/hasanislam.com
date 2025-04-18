@@ -1,0 +1,538 @@
+.navbar a {
+  color: black;
+}
+
+.navbar {
+  background-color: white;
+  padding: 30px;
+}
+
+.projects-note {
+  position: fixed;
+  bottom: var(--note-offset, 5%);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease, transform 0.6s ease, bottom 0.6s ease;
+}
+
+.projects-note.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%);
+}
+
+/* Projects Heading */
+#projects-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  line-height: 50px;
+}
+
+.p-header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+.p-description {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Filter Buttons Container */
+.filter-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0.6rem;
+  padding: 10px;
+  justify-content: flex-start;
+  scrollbar-width: none; /* Firefox */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filter-buttons::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Filter Button Styling */
+.filter-btn {
+  flex: 0 0 auto;
+  padding: 0.6rem 1.2rem;
+  background-color: white;
+  color: black;
+  font-family: 'Arial', sans-serif;
+  font-size: 1em;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInFilter 0.4s ease forwards;
+}
+
+/* Hover State */
+.filter-btn:hover {
+  background-color: #f4c430;
+  color: black;
+}
+
+/* Active State */
+.filter-btn.active {
+  background-color: #f4c430;
+  color: white;
+  font-weight: 600;
+}
+
+/* Category Color Variants */
+.filter-btn.video:hover,
+.filter-btn.video.active {
+  background-color: #f49f30;
+  color: white;
+}
+
+.filter-btn.graphic:hover,
+.filter-btn.graphic.active {
+  background-color: #00C896;
+  color: white;
+}
+
+.filter-btn.web:hover,
+.filter-btn.web.active {
+  background-color: #7D5FFF;
+  color: white;
+}
+
+/* Animation */
+@keyframes fadeInFilter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Projects */
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.project-item {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-item.hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+}
+
+.wrapper {
+  position: relative;
+  height: 300px;
+  width: 600px;
+  margin: 50px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 200ms ease-in-out;
+}
+
+.image-wrapper {
+  height: 300px;
+  width: 450px;
+  overflow: hidden;
+  border-radius: 5px;
+  /* cursor: pointer; */
+
+  transition: all 200ms ease-in-out;
+}
+
+img {
+  height: 300px;
+  width: 450px;
+  object-fit: cover;
+  object-position: top;
+
+  transition: all 200ms ease-in-out;
+}
+
+.book-design-image {
+  object-position: center;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  left: 380px;
+  transition: all 200ms ease-in-out;
+  overflow: hidden;
+}
+
+.h1-title {
+  position: relative;
+  bottom: 0;
+  height: 300px;
+  margin: 50px 0;
+  color: black;
+  font-size: 60px;
+  cursor: pointer;
+
+  text-transform: uppercase;
+
+  transition: all 200ms ease-in-out;
+}
+
+.wrapper:hover img {
+  transform: scale(2);
+  object-position: left;
+}
+
+.wrapper:hover .h1-title {
+  bottom: 300px;
+  transform: scale(0.4);
+}
+
+.wrapper:hover .image-wrapper {
+  width: 900px;
+}
+
+/* Web Overlay */
+.web-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 400ms ease;
+  z-index: 1100;
+}
+
+.web-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.web-popup {
+  position: fixed;
+  width: 80%;
+  height: 80vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -200%);
+  transition: all 400ms ease;
+  z-index: 1101;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.web-popup::-webkit-scrollbar {
+  display: none;
+}
+
+.web-popup {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.web-overlay.active .web-popup {
+  transform: translate(-50%, -50%);
+}
+
+.web-popup iframe {
+  width: 100%;
+  flex: 1;
+  border: none;
+}
+
+.visit-site-btn {
+  background: #f4c430;
+  text-align: center;
+  padding: 15px;
+}
+
+.visit-site-btn:hover {
+  background: #ecb409;
+  cursor: default;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.text:hover {
+  cursor: pointer;
+}
+
+.visit-site-btn a {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+/* Gallery Overlay */
+.gallery-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1100;
+  transition: 0.3s ease;
+}
+
+.gallery-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.gallery-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.gallery-popup::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-popup {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.gallery-images img {
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.close-gallery {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Player Overlay */
+.player-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 400ms ease;
+  z-index: 1100; /* Ensure it's above the navbar */
+}
+
+.player-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.player-popup {
+  position: fixed;
+  width: 80%;
+  margin: 80px 0;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  transition: all 400ms ease;
+  z-index: 1101; /* Ensures the video player itself is above the overlay */
+}
+
+.player-overlay.active .player-popup {
+  transform: translate(-50%, 0);
+}
+
+.player-popup iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+/* Responsive Design */
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  /* Section: Projects Hero (Heading & Description) */
+  #projects-hero {
+    padding: 15px;
+    line-height: 30px;
+  }
+
+  .p-header {
+    font-size: 1.5em;
+  }
+
+  .p-description {
+    font-size: 0.9em;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8em;
+  }
+
+  /* Section: Project Card Wrapper Layout */
+  .wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Section: Image Styling */
+  .image-wrapper {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+    filter: brightness(0.85);
+  }
+
+  .wrapper:hover .image-wrapper img {
+    transform: scale(1.05);
+  }
+
+  /* Section: Text Over Image */
+  .header-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 90%;
+    color: white;
+    z-index: 2;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    pointer-events: auto;
+  }
+
+  .h1-title {
+    font-size: clamp(2rem, 2.5vw, 2.8rem); /* auto scales between 1.2rem and 2.8rem */
+    margin: 0.3rem 0;
+    line-height: 1.4;
+    color: white;
+    transition: none !important;
+    bottom: auto !important;
+    transform: none !important;
+  }
+  
+  .wrapper:hover .h1-title {
+    transform: none !important;
+    bottom: auto !important;
+  }
+
+  .wrapper:hover .image-wrapper {
+    width: 100%;
+  }
+}
+
+/* Only apply hover effects on desktop */
+@media (hover: hover) and (pointer: fine) {
+  .wrapper:hover img {
+    transform: scale(2);
+    object-position: left;
+  }
+
+  .wrapper:hover .h1-title {
+    bottom: 300px;
+    transform: scale(0.4);
+  }
+
+  .wrapper:hover .image-wrapper {
+    width: 900px;
+  }
+}
+
+/* To top button */
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+
+  width: 50px;
+  height: 50px;
+  background-color: rgba(14, 14, 14, 0.733);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  padding: 15px;
+  font-size: 18px;
+}
+
+#topBtn:hover {
+  background-color: #ecb409;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}

@@ -1,0 +1,383 @@
+#background {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-header {
+  position: fixed;
+  top: 25%;
+  left: 22%;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-family: Arial, Helvetica, sans-serif;
+  transform: translate(-50%, -50%);
+}
+
+/* Button styling */
+.cta-btn {
+  margin: 16px;
+  font-size: 40px;
+  color: #ccc; /* Base color stays */
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 1s ease-in-out;
+  display: inline-block;
+  overflow: hidden;
+
+  &::before {
+    content: attr(data-item);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #f4c430; /* Hover color */
+    white-space: nowrap;
+    overflow: hidden;
+    clip-path: inset(0 100% 0 0); /* Start hidden */
+    opacity: 0; /* Ensure it's fully hidden */
+    transition: clip-path 1s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+    }
+  }
+}
+
+/* TOOLBAR WRAPPER CLEANED UP */
+.toolbar {
+  position: fixed;
+  top: 88%; /* placed below hero-header */
+  left: 12%;  /* aligns to the left */
+  transform: translate(0, -50%);
+  display: flex;
+  justify-content: center;
+  width: auto;
+  z-index: 10;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 50px;
+  padding: 6px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* START HERE LABEL */
+.start-here {
+  display: flex;
+  align-items: center;
+  padding: 0 3px;
+  font-weight: 600;
+}
+
+.start-here p {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 5px 5px;
+  border-radius: 25px;
+  white-space: nowrap;
+}
+
+/* GROUP FOR ICONS + FAB */
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* UNIFY ALL ICONS (INCLUDING SHARE FAB) */
+.wrapper .icon,
+.fab {
+  margin: 0;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: none;
+}
+
+.wrapper .icon span,
+.fab span {
+  height: 45px;
+  width: 45px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: black;
+  transition: 0.3s ease;
+}
+
+.wrapper .icon:hover span,
+.fab:hover span {
+  background-color: rgba(0, 0, 0, 0.15);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Icon hover */
+.icon span.icon ion-icon {
+  transition: color 0.3s ease;
+}
+
+.icon.gallery:hover span.icon ion-icon {
+  color: #FF4081;
+}
+
+.icon.projects:hover span.icon ion-icon {
+  color: #00AEEF;
+}
+
+.icon.about-me:hover span.icon ion-icon {
+  color: #7D5FFF;
+}
+
+.icon.email:hover span.icon ion-icon {
+  color: #00C896;;
+}
+
+.icon.fab:hover span.icon ion-icon {
+  color: #f49f30;
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  color: black;
+  padding: 8px 14px;
+  font-size: 13px;
+  border-radius: 20px;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.icon:hover .tooltip,
+.fab:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  top: -50px;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: inherit;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+/* FAB-SPECIFIC STYLING */
+.fab-wrapper {
+  position: relative;
+}
+
+.fab-checkbox {
+  display: none;
+}
+
+.fab-wrapper {
+  position: relative;
+}
+
+/* Hidden checkbox to toggle */
+.fab-checkbox {
+  display: none;
+}
+
+/* Share icon styling */
+.fab {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  color: black;
+  font-size: 18px;
+  border-radius: 50%;
+  padding: 17px;
+  z-index: 2;
+  transition: all 0.3s ease;
+  margin-left: 6px;
+}
+
+.fab:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.fab::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  z-index: -1;
+}
+
+.fab-checkbox:checked + .fab {
+  background: #f4c430;
+  color: black;
+}
+
+.fab-checkbox:checked + .fab::before {
+  width: 90%;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Social icons wrapper */
+.fab-wheel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7rem;
+  height: 12rem;
+  transform: scale(0) translateX(2rem);
+  transform-origin: center;
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.fab-checkbox:checked ~ .fab-wheel {
+  transform: scale(1) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Individual social icons */
+.fab-action {
+  position: absolute;
+  background: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.fab-action .icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab-action ion-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.fab-checkbox:checked ~ .fab-wheel .fab-action {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hover color styles */
+.fab-action:hover ion-icon[name="logo-instagram"] {
+  color: #e1306c;
+}
+.fab-action:hover ion-icon[name="logo-youtube"] {
+  color: #ff0000;
+}
+.fab-action:hover ion-icon[name="logo-linkedin"] {
+  color: #0077b5;
+}
+
+/* FAB action positions - orbiting around */
+.fab-action-1 {
+  top: -80px;
+  left: 20px;
+}
+.fab-action-2 {
+  top: -25px;
+  left: 50px;
+}
+.fab-action-3 {
+  top: 30px;
+  left: 20px;
+}
+
+/* Copyright */
+.hero-content {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  max-width: 300px;
+  text-align: right;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  color: black;
+  font: 16px Helvetica, Sans-Serif;
+  letter-spacing: 1.2px;
+  line-height: 1.8;
+}
+
+/* Tablet and Mobile */
+@media screen and (max-width: 1024px) {
+  .toolbar {
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    justify-content: center;
+  }
+
+  .hero-content {
+    align-items: center;
+    bottom: -3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400%;
+    background-color: rgba(255, 255, 255, 0.205);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+}
