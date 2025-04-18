@@ -4,6 +4,10 @@ Welcome to the GitHub repository for my personal website: [hasanislam.com](https
 
 This site showcases my work in content creation, video editing, graphic design, and web development. I’ve built it with HTML, CSS, and JavaScript, and it's hosted on GitHub Pages.
 
+Built with 💛 by Hasan Islam
+hasanislam.com
+[Instagram](https://www.instagram.com/hasan.xix/) | [LinkedIn](https://www.linkedin.com/in/h-islam/) | [YouTube](https://www.youtube.com/@hasanxxiv)
+
 ## 🚀 Features
 
 - 🎬 **Project Portfolio**  
@@ -35,7 +39,3 @@ This site showcases my work in content creation, video editing, graphic design, 
 ├── projects/           # Portfolio project details
 ├── 404.html            # Custom error page
 └── README.md           # You're here!
-
-Built with 💛 by Hasan Islam
-hasanislam.com
-[Instagram](https://www.instagram.com/hasan.xix/) | [LinkedIn](https://www.linkedin.com/in/h-islam/) | [YouTube](https://www.youtube.com/@hasanxxiv)
