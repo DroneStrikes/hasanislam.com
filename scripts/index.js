@@ -5,10 +5,13 @@ window.onload = () => {
   let lastImage = localStorage.getItem("lastBackground");
 
   // Decide which image to use next
-  let newImage = (lastImage === "hasanislam01.webp") ? "hasanislam02.webp" : "hasanislam01.webp";
+  let newImage =
+    lastImage === "hasanislam01.webp"
+      ? "hasanislam02.webp"
+      : "hasanislam01.webp";
 
   // Apply the background
-  background.style.backgroundImage = `url('../images/main-site/${newImage}')`;
+  background.style.backgroundImage = `url('/images/main-site/${newImage}')`;
 
   // Save this image as the last used for the next session
   localStorage.setItem("lastBackground", newImage);
