@@ -16,3 +16,13 @@ window.onload = () => {
   // Save this image as the last used for the next session
   localStorage.setItem("lastBackground", newImage);
 };
+
+const img = new Image();
+img.onload = () => {
+  background.style.backgroundImage = `url('/images/main-site/${newImage}')`;
+  localStorage.setItem("lastBackground", newImage);
+};
+img.onerror = () => {
+  console.error("Image not found:", newImage);
+};
+img.src = `/images/main-site/${newImage}`;

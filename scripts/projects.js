@@ -17,51 +17,51 @@ const projectItems = document.querySelectorAll(".project-item");
 // ==== Gallery Images by Project ID ====
 const galleries = {
   "muslim-aid": [
-    "./images/projects/muslim-aid/muslim-aid01.jpg",
-    "./images/projects/muslim-aid/muslim-aid02.jpg",
-    "./images/projects/muslim-aid/muslim-aid03.jpg",
-    "./images/projects/muslim-aid/muslim-aid04.jpg",
-    "./images/projects/muslim-aid/muslim-aid05.jpg",
-    "./images/projects/muslim-aid/muslim-aid06.jpg",
-    "./images/projects/muslim-aid/muslim-aid07.jpg",
+    "/images/projects/muslim-aid/muslim-aid01.jpg",
+    "/images/projects/muslim-aid/muslim-aid02.jpg",
+    "/images/projects/muslim-aid/muslim-aid03.jpg",
+    "/images/projects/muslim-aid/muslim-aid04.jpg",
+    "/images/projects/muslim-aid/muslim-aid05.jpg",
+    "/images/projects/muslim-aid/muslim-aid06.jpg",
+    "/images/projects/muslim-aid/muslim-aid07.jpg",
   ],
   "relentless-nomad": [
-    "./images/projects/relentless-nomad/relentless-nomad01.png",
-    "./images/projects/relentless-nomad/relentless-nomad02.png",
+    "/images/projects/relentless-nomad/relentless-nomad01.png",
+    "/images/projects/relentless-nomad/relentless-nomad02.png",
   ],
   "beacon-institute": [
-    "./images/projects/beacon/alimiyah-diploma.jpg",
-    "./images/projects/beacon/alimiyah-diploma-online.jpg",
+    "/images/projects/beacon/alimiyah-diploma.jpg",
+    "/images/projects/beacon/alimiyah-diploma-online.jpg",
   ],
 
   "lve-foundation": [
-    "./images/projects/lve-foundation/lve-foundation01.jpg",
-    "./images/projects/lve-foundation/lve-foundation02.jpg",
-    "./images/projects/lve-foundation/lve-foundation03.jpg",
-    "./images/projects/lve-foundation/lve-foundation04.png",
-    "./images/projects/lve-foundation/lve-flyer01.png",
-    "./images/projects/lve-foundation/lve-flyer02.png",
-    "./images/projects/lve-foundation/lve-brochure01.jpg",
-    "./images/projects/lve-foundation/lve-brochure02.jpg",
+    "/images/projects/lve-foundation/lve-foundation01.jpg",
+    "/images/projects/lve-foundation/lve-foundation02.jpg",
+    "/images/projects/lve-foundation/lve-foundation03.jpg",
+    "/images/projects/lve-foundation/lve-foundation04.png",
+    "/images/projects/lve-foundation/lve-flyer01.png",
+    "/images/projects/lve-foundation/lve-flyer02.png",
+    "/images/projects/lve-foundation/lve-brochure01.jpg",
+    "/images/projects/lve-foundation/lve-brochure02.jpg",
   ],
 
   "bce": [
-    "./images/projects/bca/bce-black-history.jpg",
-    "./images/projects/bca/bce-live-show01.jpg",
-    "./images/projects/bca/bce-live-show02.jpg",
-    "./images/projects/bca/vector-and-raster01.jpg",
-    "./images/projects/bca/vector-and-raster02.jpg",
-    "./images/projects/bca/vector-and-raster03.jpg",
+    "/images/projects/bca/bce-black-history.jpg",
+    "/images/projects/bca/bce-live-show01.jpg",
+    "/images/projects/bca/bce-live-show02.jpg",
+    "/images/projects/bca/vector-and-raster01.jpg",
+    "/images/projects/bca/vector-and-raster02.jpg",
+    "/images/projects/bca/vector-and-raster03.jpg",
   ],
 
   "candi": [
-    "./images/projects/candi/candi-isoc01.jpg",
-    "./images/projects/candi/candi-isoc02.jpg",
+    "/images/projects/candi/candi-isoc01.jpg",
+    "/images/projects/candi/candi-isoc02.jpg",
   ],
 
   "early-graphic": [
-    "./images/projects/early-graphics/saturday-circle-picnic.jpg",
-    "./images/projects/early-graphics/social-media-mmt.jpg",
+    "/images/projects/early-graphics/saturday-circle-picnic.jpg",
+    "/images/projects/early-graphics/social-media-mmt.jpg",
   ],
 };
 
