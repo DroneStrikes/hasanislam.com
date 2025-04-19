@@ -468,7 +468,7 @@ input:focus, textarea:focus {
   height: 24px;
   border: 2px solid #17b978;
   border-radius: 50%;
-  display: flex;
+  display: flex; /* Always flex to center tick */
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -490,8 +490,10 @@ input:focus, textarea:focus {
   border: 2px solid #17b978;
   animation: none;
   transform: scale(1.2);
+  background-color: white; /* Optional for contrast */
 }
 
+/* Animate tick visibility */
 .animated-submit.submitted .tick {
   opacity: 1;
   transform: scale(1);
