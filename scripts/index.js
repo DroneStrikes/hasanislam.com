@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const img = new Image();
   img.onload = () => {
     // Apply the background
-    background.style.backgroundImage = `url('/images/main-site/${newImage}')`;
+    background.style.backgroundImage = `url('/images/background/${newImage}')`;
     // Save this image as the last used for the next session
     localStorage.setItem("lastBackground", newImage);
   };
-  img.src = `/images/main-site/${newImage}`;
+  img.src = `/images/background/${newImage}`;
 });
