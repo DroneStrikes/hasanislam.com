@@ -11,7 +11,7 @@ window.onload = () => {
       : "hasanislam01.webp";
 
   // Apply the background
-  background.style.backgroundImage = `url('${window.location.origin}/images/main-site/${newImage}')`;
+  background.style.backgroundImage = `url('/images/main-site/${newImage}')`;
 
   // Save this image as the last used for the next session
   localStorage.setItem("lastBackground", newImage);
