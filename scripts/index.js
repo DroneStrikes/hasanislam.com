@@ -1,4 +1,4 @@
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
   const background = document.getElementById("background");
 
   // Get last image used from localStorage
@@ -18,4 +18,4 @@ window.onload = () => {
     localStorage.setItem("lastBackground", newImage);
   };
   img.src = `/images/main-site/${newImage}`;
-};
+});

@@ -127,10 +127,8 @@ function topFunction() {
 // Footer
 const messages = [
   "🚀 Built by Hasan with love and caffeine.",
-  "🧮 Over 1,500 lines of code... and counting.",
   "🛠️ Work in progress — more to come.",
   "📷 No AI-generated images — just the real stuff.",
-  "📖 Guided by Bismillah, styled with CSS.",
   "🚧 Console.log('Still improving...')",
   "✨ Built by hand with HTML, CSS, and JS.",
 ];
